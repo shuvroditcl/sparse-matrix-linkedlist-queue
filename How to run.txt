@@ -1,0 +1,12 @@
+System 1: Passing txt files name as arguments (Up to 6 files)
+
+	just as described in instruction
+        - java SparseMatrix matrix1.txt matrix2.txt matrix3.txt matrix4.txt matrix5.txt matrix6.txt
+
+	Little changes are needed like adding extra row, alter integer value with alphabet or word in any txt file to create some 	exceptions. 
+
+
+System 2: Just run the TestRunner.java 
+	- java TestRunner
+
+	Here I put 8 txt files in testcases folder differently as I can't pass 8 txt files directly and read the files from TestRunner.java 	as necessary to cover all test cases. I have covered total 10 test cases like Zero Cancellation Addition, Inconsistent Dimensions, 	Invalid File Format etc. This one is just for showing details.  

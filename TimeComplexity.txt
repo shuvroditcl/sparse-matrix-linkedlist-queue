@@ -1,0 +1,37 @@
+158.710 - PRACTICAL SOFTWARE ENGINEERING
+Assignment 2 - Algorithm Complexity Analysis
+
+Student Name: Subrota Debnath
+Student ID: 26017361
+
+1. Variables used in the analysis
+Define the variables used in your complexity analysis, for example:
+- N = number of input matrices
+- L_i = number of non-zero elements in matrix i
+- L = total number of non-zero elements across all input matrices
+- R, C = number of rows and columns (for the traditional 2D-array representation)
+
+2. Time complexity of my linked-list matrix addition algorithm
+Time complexity: O(N×L)
+Explanation:
+To add two matrices using the linked-list approach, the algorithm uses two pointers to traverse both lists simultaneously. In the worst-case scenario, where the non-zero elements do not overlap, it visits every node exactly once, resulting in a time complexity of O(L_1+L_2 ). Because the queue processes N matrices sequentially, adding each subsequent matrix to the running result takes time proportional to the number of non-zero elements. Therefore, the overall time complexity for adding N matrices scales linearly with the number of matrices and their non-zero elements, yielding O(N×L).
+
+
+Time complexity: 
+Explanation:
+
+3. Time complexity using traditional 2D arrays
+Time complexity: O(N×R×C)
+Explanation:
+If the matrices were represented as traditional R×C two-dimensional arrays, the algorithm would be forced to iterate through every single coordinate [row][col] to perform the addition, regardless of whether the value is zero or not. Adding two arrays takes O(R×C) time. To add N matrices, the algorithm must repeat this full-grid traversal for every matrix in the sequence, resulting in an overall time complexity of O(N×R×C).
+
+
+Time complexity: 
+Explanation:
+
+4. Comparison
+For extremely large sparse matrices (e.g., 1000000×1000000), the total number of elements R×C is incredibly vast (one trillion explicit positions). However, the number of actual non-zero elements (L) is typically only a few thousand. 
+	The 2D-array approach is highly inefficient because it wastes processing time (and memory) repeatedly adding 0+0=0 millions of times.
+	The linked-list approach completely bypasses the empty spaces and only performs calculations on meaningful data.
+Because L is infinitesimally smaller than R×C, the linked-list algorithm O(N×L) executes exponentially faster and requires a fraction of the memory, making it the only viable choice for very large sparse matrices.
+
